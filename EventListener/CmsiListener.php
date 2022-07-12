@@ -1,27 +1,17 @@
 <?php
 
-namespace Plugin\CategoryMetaSeoIngenuity\EventListener;
+namespace Plugin\CategoryMetaSeoIngenuity42\EventListener;
 
-// use Eccube\Common\EccubeConfig;
 use Eccube\Request\Context;
 use Eccube\Entity\Category;
 use Eccube\Repository\CategoryRepository;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-// use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
 
 class CmsiListener implements EventSubscriberInterface
 {
-    /**
-     * @var RequestStack
-     */
-    // protected $requestStack;
-
-    /**
-     * @var EccubeConfig
-     */
-    // protected $eccubeConfig;
 
     /**
      * @var Context
@@ -33,21 +23,16 @@ class CmsiListener implements EventSubscriberInterface
      */
     protected $categoryRepository;
 
-
     public function __construct(
-      // RequestStack $requestStack,
-      // EccubeConfig $eccubeConfig,
       Context $requestContext,
       CategoryRepository $categoryRepository
       )
     {
-        // $this->requestStack = $requestStack;
-        // $this->eccubeConfig = $eccubeConfig;
         $this->requestContext = $requestContext;
         $this->categoryRepository = $categoryRepository;
     }
 
-    public function onKernelRequest(FilterResponseEvent $event)
+    public function onKernelResponse(ResponseEvent $event)
     {
       if (!$event->isMasterRequest()) {
           return;
@@ -109,7 +94,7 @@ class CmsiListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            'kernel.response' => ['onKernelRequest', 512],
+          KernelEvents::RESPONSE => ['onKernelResponse', 512],
         ];
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\CategoryMetaSeoIngenuity\Form\Extension;
+namespace Plugin\CategoryMetaSeoIngenuity42\Form\Extension;
 
 use Eccube\Form\Type\Admin\CategoryType;
 use Symfony\Component\Form\AbstractTypeExtension;
