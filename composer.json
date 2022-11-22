@@ -1,6 +1,6 @@
 {
   "name": "ec-cube/categorymetaseoingenuity",
-  "version": "1.0.0",
+  "version": "4.0.6",
   "description": "カテゴリーページ個別SEO設定",
   "type": "eccube-plugin",
   "require": {
