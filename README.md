@@ -13,7 +13,7 @@
 
 ```
 cd app/Plugin;
-git clone https://github.com/cajiya/ec-cube4_cmsi.git;
+git clone -b 4.2 https://github.com/cajiya/ec-cube4_cmsi.git;
 mv ec-cube4_pmsi CategoryMetaSeoIngenuity42;
 cd ../../;
 php bin/console eccube:plugin:install --code="CategoryMetaSeoIngenuity42"
