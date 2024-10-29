@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\CategoryMetaSeoIngenuity42\EventListener;
+namespace Plugin\CategoryMetaSeoIngenuity43\EventListener;
 
 use Eccube\Request\Context;
 use Eccube\Entity\Category;

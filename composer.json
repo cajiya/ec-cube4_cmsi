@@ -1,12 +1,12 @@
 {
-  "name": "ec-cube/categorymetaseoingenuity42",
-  "version": "4.2.0",
+  "name": "ec-cube/categorymetaseoingenuity43",
+  "version": "4.3.0",
   "description": "商品ページ個別SEO設定",
   "type": "eccube-plugin",
   "require": {
     "ec-cube/plugin-installer": "^2.0"
   },
   "extra": {
-    "code": "CategoryMetaSeoIngenuity42"
+    "code": "CategoryMetaSeoIngenuity43"
   }
 }
