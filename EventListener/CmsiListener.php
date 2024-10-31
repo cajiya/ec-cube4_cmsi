@@ -34,7 +34,7 @@ class CmsiListener implements EventSubscriberInterface
 
     public function onKernelResponse(ResponseEvent $event)
     {
-      if (!$event->isMasterRequest()) {
+      if (!$event->isMainRequest()) {
           return;
       }
       if ($this->requestContext->isFront()) {
