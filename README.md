@@ -1,4 +1,4 @@
-# EC-CUBE4.1用 カテゴリーページ個別SEO設定
+# EC-CUBE4.0用 カテゴリーページ個別SEO設定
 
 カテゴリーページ毎にSEO（Title , Description）設定をするシンプルなプラグインです。
 
@@ -12,10 +12,7 @@
 # インストール方法
 
 ```
-cd app/Plugin;
-git clone https://github.com/cajiya/ec-cube4_cmsi.git;
-mv ec-cube4_cmsi CategoryMetaSeoIngenuity;
-cd ../../;
+git clone https://github.com/cajiya/ec-cube4_cmsi.git -b 4.0 app/Plugin/CategoryMetaSeoIngenuity;
 php bin/console eccube:plugin:install --code="CategoryMetaSeoIngenuity"
 ```
 
